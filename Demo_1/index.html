@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProA Arquitectura - Diseño & Innovación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">ProA <span>Arquitectura</span></div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#metodologia">Metodología</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#contacto" class="btn-primary">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Diseño arquitectónico eficiente y automatizado</h1>
+            <p>Transformamos ideas en espacios funcionales y sostenibles. Desde la concepción hasta el último detalle.</p>
+            <a href="#contacto" class="btn-hero">Solicitar Consulta Gratuita</a>
+        </div>
+    </section>
+
+    <section id="proyectos" class="section">
+        <h2>Nuestros Proyectos</h2>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="residencial">Residencial</button>
+            <button class="filter-btn" data-filter="comercial">Comercial</button>
+            <button class="filter-btn" data-filter="reformas">Reformas</button>
+        </div>
+        <div class="portfolio-grid">
+            <div class="project-card" data-category="residencial">
+                <div class="card-img" style="background-color: #334155;"></div>
+                <div class="card-info">
+                    <h3>Casa Cima</h3>
+                    <p>Vivienda unifamiliar de diseño pasivo.</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="comercial">
+                <div class="card-img" style="background-color: #475569;"></div>
+                <div class="card-info">
+                    <h3>Oficinas Nova</h3>
+                    <p>Espacio corporativo sostenible.</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="reformas">
+                <div class="card-img" style="background-color: #64748b;"></div>
+                <div class="card-info">
+                    <h3>Loft Industrial</h3>
+                    <p>Rehabilitación integral urbana.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="metodologia" class="section bg-alt">
+        <h2>Nuestra Metodología</h2>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-num">01</div>
+                <h3>Toma de Datos</h3>
+                <p>Estudio de necesidades, viabilidad y estimación inicial.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">02</div>
+                <h3>Anteproyecto 3D</h3>
+                <p>Visualización espacial y selección de materiales.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">03</div>
+                <h3>Ejecución y Gestión</h3>
+                <p>Supervisión, tramitación de licencias y entrega de obra.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculadora" class="section">
+        <h2>Estimación de Presupuesto</h2>
+        <p class="subtitle">Calcula un costo estimado de los honorarios de proyecto según tus necesidades.</p>
+        <div class="calc-box">
+            <div class="form-group">
+                <label for="superficie">Superficie estimada (m²): <span id="m2-val">100</span> m²</label>
+                <input type="range" id="superficie" min="30" max="500" value="100">
+            </div>
+            <div class="form-group">
+                <label for="tipo">Tipo de proyecto:</label>
+                <select id="tipo">
+                    <option value="obra-nueva">Obra Nueva</option>
+                    <option value="reforma">Reforma Integral</option>
+                    <option value="interiorismo">Interiorismo / Decoración</option>
+                </select>
+            </div>
+            <div class="calc-result">
+                <span>Honorarios estimados:</span>
+                <strong id="precio-estimado">2.500 €</strong>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section bg-alt">
+        <h2>Contacta con Nosotros</h2>
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" required placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" required placeholder="tu@email.com">
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Detalles del proyecto</label>
+                <textarea id="mensaje" rows="4" required placeholder="Cuéntanos brevemente sobre tu proyecto..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Consulta</button>
+            <div id="form-message" class="form-message"></div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 ProA Arquitectura. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
